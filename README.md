@@ -15,6 +15,8 @@ sudo cp HMV-cli/hmvcli /usr/bin #optional
 ```
 
 ## Usage
+First add your HMV username and password on lines 21 and 22.
+
 See available machines, and filter by difficulty (easy, medium, hard, all)
 
 ```bash
@@ -54,6 +56,8 @@ sudo cp HMV-cli/hmvcli /usr/bin #optional
 ```
 
 ## Uso
+Primero añade tu usuario y contraseña de HMV en las lineas 21 y 22.
+
 Visualiza las máquinas disponibles y filtra por dificultad (easy, medium, hard, all)
 
 ```bash
