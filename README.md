@@ -17,16 +17,16 @@ sudo cp HMV-cli/hmvcli /usr/bin #optional
 ## Usage
 See available machines, and filter by difficulty (easy, medium, hard, all)
 
-```python
+```bash
 hmvcli -m easy
 ```
 Download a machine by name:
 
-```python
+```bash
 hmvcli -d Soul
 ```
 Send the flag:
-```python
+```bash
 hmvcli -i flag -vm Soul
 ```
 
@@ -56,16 +56,16 @@ sudo cp HMV-cli/hmvcli /usr/bin #optional
 ## Uso
 Visualiza las máquinas disponibles y filtra por dificultad (easy, medium, hard, all)
 
-```python
+```bash
 hmvcli -m easy
 ```
 Descarga la máquina por nombre:
 
-```python
+```bash
 hmvcli -d Soul
 ```
 Envía la flag:
-```python
+```bash
 hmvcli -i flag -vm Soul
 ```
 
