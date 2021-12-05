@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 import requests
+import os
 from halo import Halo
 from bs4 import BeautifulSoup
 from prettytable import PrettyTable
 import argparse
 import urllib.request
+import gdown
 
 class bcolors:
     OKGREEN = '\033[92m'
@@ -18,8 +20,8 @@ parser.add_argument('-i','--input', help='Input the flag for machine. Ex: hmvcli
 parser.add_argument('-vm','--vm', help='Machine name to insert the flag. Use with argument -i')
 args = vars(parser.parse_args())
 
-user="" #ADD USER
-password="" #ADD PASSWORD
+user="" #CHANGE 
+password="" #CHANGE
 
 
 def machines(levelglob):
@@ -95,13 +97,14 @@ def machines(levelglob):
 	print (machines_tab)
 
 def download(machine_name):
-	spinner = Halo(text='Downloading...', spinner='dots')
 	url="https://downloads.hackmyvm.eu/"+str(machine_name).lower()+".zip"
+	url_gdrive = os.popen('curl -w "%{url_effective}\n" -I -L -s -S '+url+' -o /dev/null').read()
+	url_gdrive = url_gdrive.replace("https://drive.google.com/file/d/","")
+	url_gdrive = url_gdrive.replace("/view?usp=sharing\n","")
+	url_gdrive = "https://drive.google.com/uc?id="+url_gdrive
 	filename = str(machine_name).lower()+".zip"
-	spinner.start()
-	urllib.request.urlretrieve(url,filename)
-	spinner.stop()
-	print ("[+] - "+machine_name+" as been downloaded!")
+	gdown.download(url_gdrive, filename, quiet=False)
+	print ("[+] "+machine_name+" as been downloaded!")
 
 def sendFlag(flag,vm):
 	with requests.Session() as session:
