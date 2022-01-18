@@ -20,9 +20,6 @@ parser.add_argument('-i','--input', help='Input the flag for machine. Ex: hmvcli
 parser.add_argument('-vm','--vm', help='Machine name to insert the flag. Use with argument -i')
 args = vars(parser.parse_args())
 
-Juany 
-2022Cuevas$
-
 
 def machines(levelglob):
 	machines_tab = PrettyTable(["Machine name","Level","Status","Creator"])
