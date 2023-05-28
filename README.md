@@ -11,11 +11,13 @@ Clone the repository and optionally add it to the path to be able to run it in a
 
 ```bash
 git clone https://github.com/bitc0de/HMV-cli
-sudo cp HMV-cli/hmvcli /usr/bin #optional
+cd HMV-cli
+bash setup.sh # Adds username and password to hmvcli
+sudo cp hmvcli /usr/bin #optional
 ```
 
 ## Usage
-First add your HMV username and password on lines 21 and 22.
+First execute setup bash file or add your HMV username and password on lines 24 and 25.
 
 See available machines, and filter by difficulty (easy, medium, hard, all)
 
@@ -52,11 +54,13 @@ Clona el repositorio y opcionalmente añádelo al path para poder ejecutarlo en 
 
 ```bash
 git clone https://github.com/bitc0de/HMV-cli
-sudo cp HMV-cli/hmvcli /usr/bin #optional
+cd HMV-cli
+bash setup.sh # Adds username and password to hmvcli
+sudo cp hmvcli /usr/bin #optional
 ```
 
 ## Uso
-Primero añade tu usuario y contraseña de HMV en las lineas 21 y 22.
+Primero ejecuta el archivo bash setup o añade tu usuario y contraseña de HMV en las lineas 24 y 25.
 
 Visualiza las máquinas disponibles y filtra por dificultad (easy, medium, hard, all)
 
